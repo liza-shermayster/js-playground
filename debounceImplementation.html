@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onclick = "myFunction()">Click me </button>
+   <h1>hello</h1> 
+   <h1 id='count'>hello</h1> 
+   <h1>hello</h1> 
+   <h1>hello</h1> 
+   <h1>hello</h1> 
+   <h1>hello</h1> 
+</body>
+<script>
+    let count = 0;
+function myFunction(){
+    let el = document.getElementById('count');
+    count++;
+  el.innerHTML = count;
+    
+// const text = document.createTextNode(count);
+// newEl.appendChild(text);
+// document.body.appendChild(newEl);
+}
+</script>
+</html>
