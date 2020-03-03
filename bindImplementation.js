@@ -18,3 +18,4 @@ function bind(fn, context) {
 
 let baz1 = bind(foo, { bar: "bye" });
 baz1();
+
