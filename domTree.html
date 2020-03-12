@@ -18,17 +18,15 @@
   </body>
   <script>
     let el = document.getElementById("h3");
-    console.log(el);
-
-    console.log(el.parentNode);
-
+    let root = document.getElementById("div1");
     function reversePath(element, root) {
       const path = [];
       let pointer = element;
 
       while (pointer.parent) {
         const index = pointer.parent.children.indexOf(pointer);
-        path.push(pointer.parent);
+        path.push(index);
+        pointer = pointer.parent;
       }
       pointer = root;
       while (path.length) {

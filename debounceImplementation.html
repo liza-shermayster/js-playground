@@ -9,24 +9,40 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <button onclick = "myFunction()">Click me </button>
-   <h1>hello</h1> 
-   <h1 id='count'>hello</h1> 
-   <h1>hello</h1> 
-   <h1>hello</h1> 
-   <h1>hello</h1> 
-   <h1>hello</h1> 
+    <div id="div0">
+        <div id="div1">
+          global
+          <h2 id="h2">
+            child1
+            <h3 id="h3">child2</h3>
+          </h2>
+        </div>
+      </div>
 </body>
 <script>
-    let count = 0;
-function myFunction(){
-    let el = document.getElementById('count');
-    count++;
-  el.innerHTML = count;
+     let el = document.getElementById("h3");
+ let root1 = document.getElementById("div0");
+
+    function reversePath(element, root) {
+      const path = [];
+      let pointer = element;
+      while (pointer.parentElement) {
+        const index = [...pointer.parentElement.children].indexOf(pointer.parentElement);
+        path.push(index);
+         
+        pointer = pointer.parentElement;
+      }
+    }
+reversePath(el,root1);
+//     let count = 0;
+// function myFunction(){
+//     let el = document.getElementById('count');
+//     count++;
+//   el.innerHTML = count;
     
-// const text = document.createTextNode(count);
-// newEl.appendChild(text);
-// document.body.appendChild(newEl);
-}
+// // const text = document.createTextNode(count);
+// // newEl.appendChild(text);
+// // document.body.appendChild(newEl);
+// }
 </script>
 </html>
